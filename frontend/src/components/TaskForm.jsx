@@ -43,7 +43,7 @@ function TaskForm({ task, onSubmit, onCancel }) {
     };
 
     if (task) {
-      onSubmit(task._id, submitData);
+      onSubmit(task.id, submitData);
     } else {
       onSubmit(submitData);
     }

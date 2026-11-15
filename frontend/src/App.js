@@ -45,7 +45,7 @@ function App() {
   const handleUpdateTask = async (id, taskData) => {
     try {
       const response = await axios.put(`${API_URL}/${id}`, taskData);
-      setTasks(tasks.map(task => task._id === id ? response.data.data : task));
+      setTasks(tasks.map(task => task.id === id ? response.data.data : task));
       setEditingTask(null);
       setShowForm(false);
     } catch (error) {
@@ -58,7 +58,7 @@ function App() {
     if (window.confirm('Are you sure you want to delete this task?')) {
       try {
         await axios.delete(`${API_URL}/${id}`);
-        setTasks(tasks.filter(task => task._id !== id));
+        setTasks(tasks.filter(task => task.id !== id));
       } catch (error) {
         console.error('Error deleting task:', error);
         alert('Failed to delete task');

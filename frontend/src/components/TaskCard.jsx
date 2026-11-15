@@ -54,7 +54,7 @@ function TaskCard({ task, onEdit, onDelete }) {
           ✏️ Edit
         </button>
         <button
-          onClick={() => onDelete(task._id)}
+          onClick={() => onDelete(task.id)}
           className="text-danger hover:text-red-600 font-semibold"
         >
           🗑️ Delete

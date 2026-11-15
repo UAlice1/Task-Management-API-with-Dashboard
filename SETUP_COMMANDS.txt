@@ -1,0 +1,46 @@
+═══════════════════════════════════════════════════════════
+   COPY AND RUN THESE COMMANDS
+═══════════════════════════════════════════════════════════
+
+STEP 1: Install Prisma Dependencies
+────────────────────────────────────
+cd backend
+npm install
+
+
+STEP 2: Push Database Schema to Neon
+────────────────────────────────────
+npx prisma db push
+
+
+STEP 3: Generate Prisma Client
+────────────────────────────────────
+npx prisma generate
+
+
+STEP 4: Go Back to Root Folder
+────────────────────────────────────
+cd ..
+
+
+STEP 5: Start Your App
+────────────────────────────────────
+npm run dev
+
+
+═══════════════════════════════════════════════════════════
+   THAT'S IT! YOUR APP WILL START!
+═══════════════════════════════════════════════════════════
+
+Open Browser: http://localhost:3000
+
+═══════════════════════════════════════════════════════════
+   BONUS: View Database in Prisma Studio
+═══════════════════════════════════════════════════════════
+
+cd backend
+npx prisma studio
+
+Opens at: http://localhost:5555
+
+═══════════════════════════════════════════════════════════
