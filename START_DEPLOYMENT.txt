@@ -1,0 +1,76 @@
+═══════════════════════════════════════════════════════════
+   DEPLOY TO VERCEL - SIMPLE STEPS
+═══════════════════════════════════════════════════════════
+
+STEP 1: Go to Vercel
+────────────────────────────────────────────────────────────
+Open: https://vercel.com
+Sign in with GitHub
+
+
+STEP 2: Deploy Backend
+────────────────────────────────────────────────────────────
+1. Click "Add New" → "Project"
+2. Import your repository
+3. Root Directory: backend
+4. Add Environment Variable:
+   DATABASE_URL = postgresql://neondb_owner:npg_BeXQpMR0Fnj1@ep-still-lake-bdh4zlb7-pooler.c-8.us-east-2.aws.neon.tech/neondb?sslmode=require
+5. Click "Deploy"
+6. COPY the URL (e.g., https://your-backend.vercel.app)
+
+
+STEP 3: Update Frontend
+────────────────────────────────────────────────────────────
+Open: frontend/src/App.js
+
+Change line 8 from:
+   const API_URL = 'http://localhost:5000/api/tasks';
+
+To:
+   const API_URL = 'https://YOUR-BACKEND-URL.vercel.app/api/tasks';
+
+Save the file!
+
+
+STEP 4: Deploy Frontend
+────────────────────────────────────────────────────────────
+1. Go back to Vercel
+2. Click "Add New" → "Project"
+3. Import the SAME repository
+4. Root Directory: frontend
+5. Framework: Create React App
+6. Click "Deploy"
+
+
+DONE!
+────────────────────────────────────────────────────────────
+Your app is now LIVE on the internet!
+
+Frontend: https://your-app.vercel.app
+Backend: https://your-backend.vercel.app
+API Docs: https://your-backend.vercel.app/api-docs
+
+
+═══════════════════════════════════════════════════════════
+   FILES CREATED FOR YOU:
+═══════════════════════════════════════════════════════════
+
+✓ vercel.json - Vercel configuration
+✓ backend/vercel.json - Backend config
+✓ DEPLOY_TO_VERCEL.md - Detailed guide
+✓ QUICK_DEPLOY.md - 5-minute guide
+✓ START_DEPLOYMENT.txt - This file
+
+
+═══════════════════════════════════════════════════════════
+   IMPORTANT NOTES:
+═══════════════════════════════════════════════════════════
+
+- Your Neon database is already configured
+- No MongoDB installation needed
+- Backend and frontend deploy separately
+- Free hosting on Vercel
+- Automatic HTTPS
+
+
+═══════════════════════════════════════════════════════════
