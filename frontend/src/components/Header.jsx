@@ -15,7 +15,7 @@ function Header() {
             rel="noopener noreferrer"
             className="bg-secondary hover:bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
           >
-            📚 API Docs
+            API Docs
           </a>
         </div>
       </div>

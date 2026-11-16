@@ -2,15 +2,15 @@ import React from 'react';
 
 function TaskCard({ task, onEdit, onDelete }) {
   const statusColors = {
-    pending: 'bg-warning text-white',
-    'in-progress': 'bg-primary text-white',
-    completed: 'bg-success text-white',
+    pending: 'bg-yellow-500 text-white',
+    'in-progress': 'bg-blue-600 text-white',
+    completed: 'bg-green-600 text-white',
   };
 
   const priorityColors = {
-    low: 'text-gray-600',
-    medium: 'text-orange-600',
-    high: 'text-red-600',
+    low: 'text-gray-700 font-bold',
+    medium: 'text-orange-600 font-bold',
+    high: 'text-red-600 font-bold',
   };
 
   const formatDate = (dateString) => {
@@ -42,7 +42,7 @@ function TaskCard({ task, onEdit, onDelete }) {
 
       {task.dueDate && (
         <div className="text-sm text-gray-500 mb-4">
-          📅 Due: {formatDate(task.dueDate)}
+          Due: {formatDate(task.dueDate)}
         </div>
       )}
 
@@ -51,13 +51,13 @@ function TaskCard({ task, onEdit, onDelete }) {
           onClick={() => onEdit(task)}
           className="text-primary hover:text-blue-600 font-semibold"
         >
-          ✏️ Edit
+          Edit
         </button>
         <button
           onClick={() => onDelete(task.id)}
           className="text-danger hover:text-red-600 font-semibold"
         >
-          🗑️ Delete
+          Delete
         </button>
       </div>
     </div>
