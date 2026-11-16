@@ -16,9 +16,7 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-app.vercel.app', 'https://your-backend.vercel.app']
-    : '*',
+  origin: '*',
   credentials: true
 }));
 app.use(express.json());

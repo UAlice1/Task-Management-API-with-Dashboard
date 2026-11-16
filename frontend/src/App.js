@@ -5,7 +5,7 @@ import TaskForm from './components/TaskForm';
 import Header from './components/Header';
 import Stats from './components/Stats';
 
-const API_URL = 'http://localhost:5000/api/tasks';
+const API_URL = 'https://task-management-api-with-dashboard.vercel.app/api/tasks';
 
 function App() {
   const [tasks, setTasks] = useState([]);

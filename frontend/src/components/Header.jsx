@@ -10,7 +10,7 @@ function Header() {
             <p className="text-gray-600 mt-1">Organize and track your tasks efficiently</p>
           </div>
           <a
-            href="http://localhost:5000/api-docs"
+            href="https://task-management-api-with-dashboard.vercel.app/api-docs"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-secondary hover:bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
